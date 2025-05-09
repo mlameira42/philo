@@ -6,7 +6,7 @@
 /*   By: mlameira <mlameira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:47:09 by mlameira          #+#    #+#             */
-/*   Updated: 2025/04/16 15:44:28 by mlameira         ###   ########.fr       */
+/*   Updated: 2025/05/09 17:00:31 by mlameira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ typedef struct  s_philo
 }                       t_philo;
 
 int     ft_strlen(char *s);
-long long int	ft_atoi_lld(const char *nptr);
+long long	ft_atoi_lld(const char *nptr);
 void    ft_free(t_philo *a, void *b, void  *c);
 void    mutexes_init(t_philo *philo, pthread_mutex_t *forks, pthread_mutex_t *death);
 void    eat(t_philo *philo);
