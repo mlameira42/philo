@@ -6,7 +6,7 @@
 /*   By: mlameira <mlameira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:38:11 by mlameira          #+#    #+#             */
-/*   Updated: 2025/04/16 15:40:50 by mlameira         ###   ########.fr       */
+/*   Updated: 2025/05/17 23:05:06 by mlameira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static void    *initialize_thread(void *arg)
     t_philo   *philo;
     
     philo = (t_philo *)arg;
+    if (!(philo->id % 2))
+        usleep(500);
     if (philo->philo_amt == 1 && !isdead(philo))
     {
         if (pthread_mutex_lock(philo->l_fork))        
